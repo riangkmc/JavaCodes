@@ -19,12 +19,7 @@ public class Client {
 
     @Override
     public String toString() {
-        return "Client{" +
-                "name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", birthDate=" + birthDate +
-                ", listPedidos=" + listPedidos +
-                '}';
+        return "Cliente: " +name  + " " + birthDate + " - " + email;
     }
 
     public void addOrder(Order order){

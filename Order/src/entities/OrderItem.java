@@ -13,11 +13,9 @@ public class OrderItem {
 
     @Override
     public String toString() {
-        return "OrderItem{" +
-                "product=" + product +
-                ", quantity=" + quantity +
-                ", price=" + price +
-                '}';
+        return  product.getName() + ", " + product.getPrice() + ", Quantity: " +
+                quantity + ", SubTotal: " + subTotal();
+
     }
 
     public Product getProduct() {
@@ -37,11 +35,11 @@ public class OrderItem {
         this.quantity = quantity;
     }
 
-    public double getPrice() {
+    public double getPriceTotal() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPriceTotal(double price) {
         this.price = price;
     }
 
