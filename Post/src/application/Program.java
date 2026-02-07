@@ -8,7 +8,7 @@ import entities.Post;
 public class Program {
 
     public static void main(String[] args) {
-        //teste
+
 
         Post post1 = new Post(LocalDateTime.now(),"Traveling to new Zealand","I´m going to visit a new country!");
         Comment comment01 = new Comment("Have a nice trip!");
