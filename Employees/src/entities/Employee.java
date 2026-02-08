@@ -16,11 +16,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "name='" + name + '\'' +
-                ", hours=" + hours +
-                ", valuePorHour=" + valuePorHour +
-                '}';
+        return name + " - $ " + payment();
     }
 
     public double payment(){
