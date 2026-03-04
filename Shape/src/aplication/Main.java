@@ -25,9 +25,9 @@ public class Main {
             System.out.printf("Color (BLACK/BLUE/RED): ");
             String color = sc.next().toUpperCase();
             if (formShape.equals("r")){
-                System.out.printf("Width: ");
+                System.out.printf("Width:  ");
                 double width = sc.nextDouble();
-                System.out.printf("Heigh: ");
+                System.out.printf("Heighh:  ");
                 double height = sc.nextDouble();
                 Shape shape1 = new Rectangle(Color.valueOf(color),width,height);
                 shapes.add(shape1);
