@@ -1,31 +1,26 @@
 package main.java.org.arquivo01;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        File file = new File("C:\\arquivos-teste\\in.txt");
-        Scanner sc = null;
 
-        try{
-            sc = new Scanner(file);
-            System.out.println("Arquivo existe? " + file.exists());
-            System.out.println("Caminho absoluto: " + file.getAbsolutePath());
-            while (sc.hasNextLine()){
-                System.out.println(sc.nextLine());
+        String path = ("C:\\arquivos-teste\\in.txt");
+
+
+        try(BufferedReader br = new BufferedReader(new FileReader(path))){
+            String line = br.readLine();
+
+            while (line !=null){
+                System.out.println(line);
+                line = br.readLine();
             }
         }
-        catch (FileNotFoundException e){
-            System.out.println("Error:" + e.getMessage());
+        catch (IOException e){
+            System.out.println(e.getMessage());
         }
-        finally {
-            if(sc != null){
-                sc.close();
 
-            }
-        }
     }
 }
