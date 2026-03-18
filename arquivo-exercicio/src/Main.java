@@ -28,7 +28,7 @@ public class Main {
             double coluna3 = Double.parseDouble(cols[2].trim());
             String nome = cols[0];
             double resultado = coluna2 * coluna3;
-            resultados.add(nome + ": " + String.valueOf(resultado));
+            resultados.add(nome + ":: " + String.valueOf(resultado));
 
             System.out.println("Resultado: " + resultado);
         }
